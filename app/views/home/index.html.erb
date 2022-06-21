@@ -1,0 +1,10 @@
+<h1>Seja Bem-Vindo</h1>
+
+<% @posts.each do |post| %>
+    <% if post.description? %>
+    <h2> <%= link_to post.title, post %> </h2>
+    <% end %>
+<% end %>
+
+<%= link_to "Posts", posts_path %>
+<% link_to "Voltar", root_path %>
